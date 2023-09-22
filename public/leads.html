@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BI2F Cursos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        div.container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #020202;
+            padding: 10px 0;
+            color: #e2e2e2;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header nav h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .login-input {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 5px;
+            padding: 5px 10px;
+        }
+
+        button, input[type="submit"] {
+            padding: 10px 15px;
+            background-color: #020202;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover, input[type="submit"]:hover {
+            background-color: #015ab9;
+        }
+
+        .course-advertisement {
+            background-color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .course-advertisement h2 {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .course-advertisement ul {
+            list-style-type: disc;
+            margin-top: 20px;
+            padding-left: 30px;
+            text-align: left;
+        }
+
+        .image-scrollbar {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .image-scrollbar img {
+            max-height: 150px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-scrollbar img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #030303;
+            color: #000; 
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>BI2F Cursos</h1>         
+		</nav>
+    </header>
+
+    <section class="course-advertisement">
+        <div class="container">
+            <h2>BI2F</h2>
+            <p>Se você não quer ficar para tras, aprenda com nós. Temos os melhores cursos da atualidade!</p>
+            <ul>
+                <li>Facil entendimento.</li>
+                <li>Facilidade na hora de procurar empregos.</li>
+                <li>Tudo para o seu aprendizado.</li>
+                
+            </ul>
+            <div class="image-scrollbar">
+                <img src="img/keyboard.jpeg" alt="Curso imagem 1">
+                <img src="img/htmml.jpeg" alt="Curso imagem 2">
+                <img src="img/aprendizado2.jpeg" alt="Curso imagem 3">
+            </div>
+
+        </div>
+    </section>
+
+	<datalist id="genero">
+		<option value="feminino">
+		<option value="masculino">
+		<option value="não_informado">
+	</datalist>
+
+    <div class="container">
+        <h1>Inscreva-se:</h1>
+        <form action="http://localhost:3000/dados" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="celular">Celular:</label>
+			<input type="text" id="celular" name="celular" required>
+			<label for="genero">Gênero:</label>
+			<input type="text" id="genero" name="genero" list="genero" required>
+            <input type="checkbox" id="lgpd" name="lgpd" required>
+            <label for="lgpd">Aceito os termos de uso e política de privacidade</label>
+            <input type="submit" value="ENVIAR">
+        </form>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 JS Academy. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Contato: (11) 98765-4321 | contato@jsacademy.com.br</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
